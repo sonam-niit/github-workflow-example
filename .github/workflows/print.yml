@@ -2,6 +2,8 @@ name: Print Message
 
 on:
     push:
+        branches:
+            - mastesr
 
 jobs:
     say-hello:

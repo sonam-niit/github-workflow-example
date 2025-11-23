@@ -1,0 +1,22 @@
+name: Node Js CI
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v5
+
+            - name: Set up Node Js Environment
+              uses: actions/setup-node@v6
+
+            - name: Install Dependencies
+              run: npm install 
+
+            - name: Run tests
+              run: npm test
+ 
